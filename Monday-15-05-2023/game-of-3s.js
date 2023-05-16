@@ -15,6 +15,8 @@
 //6. divide the number by 3 and push into the empty array.
 
 
+//C: Code => One method
+
 function gameOfThree(num) {
     const firstStep =[];
     while (num !==1) {
@@ -32,3 +34,26 @@ function gameOfThree(num) {
 }
 console.log(gameOfThree(100));
 
+
+// second method
+
+
+function gameOfThree1(num1) {
+    const firstStep1 =[];
+    while (num1 !==1) {
+        if (num1 % 3 == 0){
+            firstStep1.push(`${num1} ${0}`);
+            num1 = num1 / 3;
+        }else if(num1 % 3 == 1){
+            firstStep1.push(`${num1} ${"-1"}`);
+            num1 = (num1-1 )/ 3;
+        }
+        else{
+            firstStep1.push(`${num1} ${"1"}`);
+            num1 =(num1+1)/3;
+        }
+    }
+    firstStep1.push('1');
+    return firstStep1.join('\n');
+}
+console.log(gameOfThree1(100));
